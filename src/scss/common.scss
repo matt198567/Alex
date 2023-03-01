@@ -1,4 +1,11 @@
 // Заголовки, загальні БЕМ блоки та інше...
+.page {
+  // .page__main
+
+  &__main {
+  }
+}
+
 .title {
   &__label {
     text-transform: uppercase;
@@ -28,5 +35,54 @@
     font-weight: 700;
     font-size: rem(36);
     line-height: 1.25; /* 44/35 */
+    span {
+      color: $purpleColor;
+      margin-left: rem(3);
+    }
+    // .title__value_big
+    &_big {
+      font-size: rem(44);
+      line-height: math.div(55, 44);
+
+      @media (max-width: $mobile) {
+        font-size: rem(34);
+      }
+    }
   }
 }
+
+.text {
+  line-height: math.div(32, 16);
+  p {
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+  }
+}
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: rem(5);
+  @include adaptiveValue("column-gap", 34, 15);
+
+  // .social__link
+
+  &__link {
+    font-size: rem(22);
+    transition: color 0.3s ease 0s;
+
+    @media (max-width: $mobile) {
+      font-size: rem(32);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $purpleColor;
+      }
+    }
+  }
+}
+
+//====================================================================================================
