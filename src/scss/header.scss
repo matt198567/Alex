@@ -133,7 +133,7 @@
     line-height: 1.2; /* 19/16 */
     transition: color 0.3s ease 0s;
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet) {
       color: #232e35;
       &::after {
         content: "";
