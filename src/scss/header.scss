@@ -116,6 +116,7 @@
 
   &__item {
     text-align: center;
+
     @media (max-width: $mobile) {
       &:not(:last-child) {
         margin-bottom: rem(32);
@@ -126,13 +127,30 @@
   // .menu__link
 
   &__link {
+    display: block;
+    position: relative;
     font-weight: 500;
     line-height: 1.2; /* 19/16 */
     transition: color 0.3s ease 0s;
 
+    @media (min-width: 768px) {
+      color: #232e35;
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 1px;
+        background-color: $purpleColor;
+        transition: color 0.3s ease 0s;
+        bottom: 3px;
+      }
+    }
+
     @media (any-hover: hover) {
       &:hover {
         color: $purpleColor;
+        width: 100%;
       }
     }
 
