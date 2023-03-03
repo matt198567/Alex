@@ -27,6 +27,22 @@
   &__logo {
     position: relative;
     z-index: 5;
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: $mainColor;
+      transition: 0.3s ease 0s;
+      bottom: -3px;
+      transform: scaleX(0);
+    }
+    @media (any-hover: hover) {
+      &:hover::after {
+        transform: scaleX(1);
+      }
+    }
   }
 
   // .header__button
@@ -133,8 +149,8 @@
     line-height: 1.2; /* 19/16 */
     transition: color 0.3s ease 0s;
 
-    @media (min-width: $tablet) {
-      color: #232e35;
+    @media (min-width: $mobile) {
+      color: $mainColor;
       &::after {
         content: "";
         position: absolute;
@@ -142,21 +158,25 @@
         width: 0;
         height: 1px;
         background-color: $purpleColor;
-        transition: color 0.3s ease 0s;
-        bottom: 3px;
+        transition: width 0.3s ease 0s;
+        bottom: 2px;
       }
-    }
-
-    @media (any-hover: hover) {
-      &:hover {
-        color: $purpleColor;
-        width: 100%;
+      @media (any-hover: hover) {
+        &:hover::after {
+          width: 100%;
+        }
       }
     }
 
     @media (max-width: $mobile) {
       color: #fff;
       font-size: rem(24);
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        color: $purpleColor;
+        width: 100%;
+      }
     }
   }
 }
