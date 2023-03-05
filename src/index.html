@@ -2,9 +2,9 @@
 <html lang="en">
   @@include('html/_head.htm',{ "title":"HomePage" })
   <body>
-    <div class="wrapper">
+    <div data-fp class="wrapper">
       @@include('html/_header.htm',{})
-      <main data-fp class="page">
+      <main class="page">
         <section data-fp-section class="page__main main-section">
           <div class="main-section__container">
             <div class="main-section__content">
@@ -297,6 +297,133 @@
                     </div>
                   </article>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section data-fp-section class="page__skills skills">
+          <div class="skills__container">
+            <div class="skills__title">
+              <div class="title__label">LEARNING PATH</div>
+              <h2 class="title__value">Education & Skills</h2>
+            </div>
+            <div class="skills__body">
+              <div class="education__sertificate">
+                <a href="" class="education__image-ibg">
+                  <img src="@img/main/certificate.jpg" alt="Certificate" />
+                </a>
+              </div>
+              <div class="skills__content content-skills">
+                <div class="content-skills__text text">
+                  <p>
+                    For 1+ years, I have been continuously learning in the field
+                    of front-end and experimenting with new technologies and
+                    frameworks, and here you can see a summary of my skills.
+                  </p>
+                </div>
+                <ul class="content-skills__items">
+                  <li class="content-skills__item">
+                    <div class="content-skills__label">React</div>
+                    <div class="content-skills__line">
+                      <span style="width: 30.5%"></span>
+                    </div>
+                  </li>
+                  <li class="content-skills__item">
+                    <div class="content-skills__label">Javascript</div>
+                    <div class="content-skills__line">
+                      <span style="width: 45.5%"></span>
+                    </div>
+                  </li>
+                  <li class="content-skills__item">
+                    <div class="content-skills__label">HTML, CSS</div>
+                    <div class="content-skills__line">
+                      <span style="width: 75.5%"></span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section data-fp-section class="page__contacts contacts">
+          <div class="contacts__container">
+            <div class="contacts__content">
+              <form action="#" class="contacts__form form">
+                <div class="form__item">
+                  <input
+                    data-required
+                    autocomplete="off"
+                    type="text"
+                    name="form[]"
+                    data-error="Write your name"
+                    placeholder="Name"
+                    class="form__input"
+                  />
+                </div>
+                <div class="form__item">
+                  <input
+                    data-required="email"
+                    autocomplete="off"
+                    type="text"
+                    name="form[]"
+                    data-error="Enter your email"
+                    placeholder="Email"
+                    class="form__input"
+                  />
+                </div>
+                <div class="form__item">
+                  <textarea
+                    autocomplete="off"
+                    name="form[]"
+                    placeholder="Message"
+                    data-error="Error"
+                    class="form__input"
+                  ></textarea>
+                </div>
+                <div class="form__item">
+                  <button type="submit" class="form__button">
+                    Send Message
+                  </button>
+                </div>
+              </form>
+              <div class="contacts__body">
+                <ul class="contacts__list list-contacts">
+                  <li class="list-contacts__item">
+                    <div class="list-contacts__icon">
+                      <img src="@img/contacts/icons/pin.svg" alt="Icon" />
+                    </div>
+                    <div class="list-contacts__body">
+                      <div class="list-contacts__title">Address</div>
+                      <a href="" class="list-contacts__text">
+                        Kyiv, st. Petra - Zaporozhets 3
+                      </a>
+                    </div>
+                  </li>
+                  <li class="list-contacts__item">
+                    <div class="list-contacts__icon">
+                      <img src="@img/contacts/icons/phone.svg" alt="Icon" />
+                    </div>
+                    <div class="list-contacts__body">
+                      <div class="list-contacts__title">Phone</div>
+                      <a href="tel:+380674473513" class="list-contacts__text"
+                        >+38 067 447 35 13</a
+                      >
+                    </div>
+                  </li>
+                  <li class="list-contacts__item">
+                    <div class="list-contacts__icon">
+                      <img src="@img/contacts/icons/mail.svg" alt="Icon" />
+                    </div>
+                    <div class="list-contacts__body">
+                      <div class="list-contacts__title">E-Mail</div>
+                      <a
+                        href="mailto:bikovskij97@gmail.com"
+                        class="list-contacts__text"
+                        >bikovskij97@gmail.com</a
+                      >
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
